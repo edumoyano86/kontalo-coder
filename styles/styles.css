@@ -72,6 +72,7 @@ aside ul {
 aside ul li {
     margin: 50px 20px;
 }
+
 aside a {
     background-color: #fef5c8;
     font-family: "SUSE Mono", sans-serif;
@@ -83,6 +84,11 @@ aside a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+aside a:hover, .active {
+    background-color: #05eede;
+    color: rgb(82, 80, 80);
 }
 
 /* TODO EL CSS DE MAIN, PARTE CENTRAL DE LA PAGINA */
