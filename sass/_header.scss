@@ -1,0 +1,46 @@
+@use "variables" as v;
+
+.header {
+    @include v.main(header, overflow, v.$background, height, v.$fuente);
+    color: v.$color;
+    border-bottom: v.$bottom;
+    display: flex;
+    align-items: center;
+    a {
+        img {
+            height: 3.8rem;
+        }
+    }
+}
+
+aside {
+    grid-area: aside;
+    background-color: v.$background;
+    ul {
+        list-style: v.$style;
+        padding: 0 10px;
+        li {
+            margin: 50px 20px;
+            a {
+                text-decoration: v.$decoration;
+                background-color: #fef5c8;
+                font-family: v.$fuente;
+                font-weight: bold;
+                padding: 5px;
+                border-bottom: v.$bottom;
+                border-radius: v.$radius;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            a:hover, .active {
+                background-color: #05eede;
+                color: rgb(82, 80, 80);
+            }
+        }
+    };
+}
+
+.navbar-toggler {
+    display: none;
+}

@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+.footer {
+    @include v.main(footer, overflow, v.$background, height, v.$fuente);
+    color: black;
+    width: 100%;
+    border-top: v.$bottom;
+    display: flex;
+    align-items: center;
+    h3 {
+        font-size: smaller;
+        margin-left: 20px;
+    }
+    ul {
+        list-style: v.$style;
+        margin-left: auto;
+        padding: 20px 10px;
+        a {
+            text-decoration: v.$decoration;
+            img {
+                margin: 5px;
+                height: 1.3rem;
+            }
+        }
+    }  
+}

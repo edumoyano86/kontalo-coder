@@ -1,0 +1,28 @@
+@use "variables" as v;
+
+.paginas {
+    @include v.main(main, hidden, #fef5c8, 100vh, v.$fuente);
+    .encabezado {
+        background-color: #F23E02;
+        color: white;
+        padding: 1px 20px;
+    }
+    .lista {
+            margin-top: 50px;
+            .encabezado-lista {
+                    background-color: v.$background;
+                }
+                .fila-datos {
+                    div {
+                        background-color: white;
+                    }
+                    img {
+                        height: 55px;
+                        transition: transform 1s ease;
+                    }
+                    img:hover {
+                        transform: scale(2);
+                    }
+                }
+        }
+}

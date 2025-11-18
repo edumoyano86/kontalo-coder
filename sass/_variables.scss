@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+$fuente: "SUSE Mono", sans-serif;
+$background: #00988d;
+$color: white;
+$bottom: black solid 1px;
+$style: none;
+$decoration: none;
+$radius: 10px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin main($grid, $overflow, $background, $height, $font) {
+    grid-area: $grid;
+    overflow-x: $overflow;
+    background-color: $background;
+    min-height: $height;
+    font-family: $font;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// Mixin responsive
+
+@mixin tablet{
+    @media (min-width: 320px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (min-width: 320px) and (max-width: 550px) {
+        @content;
+    }
+}

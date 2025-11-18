@@ -1,0 +1,31 @@
+@use "variables" as v;
+
+.contacto {
+    @include v.main(main, hidden, #fef5c8, 100vh, v.$fuente);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .form { 
+        background-color: white;
+        width: 60%;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 2%;
+    }
+    .submit  {
+        background-color: rgb(255, 69, 69);
+        transition: background-color 0,7s ease-in-out;
+        font-size: large;
+        color: white;
+        padding: 10px;
+        border: white;
+        border-radius: 5px;
+    }
+    .submit:hover, .active {
+        background-color: #8f8c8c;
+        
+    }
+}
