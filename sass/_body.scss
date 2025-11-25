@@ -200,9 +200,9 @@ body {
         .paginas, .main {
             overflow-x: hidden;
             .lista {
-                overflow: visible ;
-                padding-right: 0 ;
-                margin-right: 0 ;
+                //overflow: visible ;
+                //padding-right: 0 ;
+                //margin-right: 0 ;
                 .tabla-responsive {
                     display: block;
                     overflow-x: auto;
@@ -211,23 +211,30 @@ body {
                     padding-bottom: 1rem;
                     margin-bottom: 1rem;
                     .row {
-                        flex-wrap: nowrap ;
-                        width: max-content;
+                        flex-wrap: wrap;
+                        width: 100%;
                         min-width: 100%;
                         margin: 0;
                     }
-                    .row .col-3 {
-                        width: 180px; 
-                        min-width: 180px;
+                    .row > [class*="col-"] {
+                        flex-grow: 1;
+                        flex-basis: 0;
+
+                        &.col-3 {
+                            flex-grow: 1.5;
+                        }
                     }
                     .encabezado-lista div {
                         background-color: #00988D;
+                    }
+                    .mobile {
+                        display: none;
                     }            
                 }
-                .tabla-responsive .col, .tabla-responsive [class*="col-"] {
-                    min-width: 130px;
+                /*.tabla-responsive .col, .tabla-responsive [class*="col-"] {
+                    min-width: 50px;
                     white-space: normal;
-                }
+                }*/
             }
             .graficos-grid .graficos ol {
                     padding: 35px 60px;

@@ -347,11 +347,6 @@ body .main .graficos-grid .graficos ol {
   body .paginas, body .main {
     overflow-x: hidden;
   }
-  body .paginas .lista, body .main .lista {
-    overflow: visible;
-    padding-right: 0;
-    margin-right: 0;
-  }
   body .paginas .lista .tabla-responsive, body .main .lista .tabla-responsive {
     display: block;
     overflow-x: auto;
@@ -361,21 +356,29 @@ body .main .graficos-grid .graficos ol {
     margin-bottom: 1rem;
   }
   body .paginas .lista .tabla-responsive .row, body .main .lista .tabla-responsive .row {
-    flex-wrap: nowrap;
-    width: max-content;
+    flex-wrap: wrap;
+    width: 100%;
     min-width: 100%;
     margin: 0;
   }
-  body .paginas .lista .tabla-responsive .row .col-3, body .main .lista .tabla-responsive .row .col-3 {
-    width: 180px;
-    min-width: 180px;
+  body .paginas .lista .tabla-responsive .row > [class*=col-], body .main .lista .tabla-responsive .row > [class*=col-] {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+  body .paginas .lista .tabla-responsive .row > [class*=col-].col-3, body .main .lista .tabla-responsive .row > [class*=col-].col-3 {
+    flex-grow: 1.5;
   }
   body .paginas .lista .tabla-responsive .encabezado-lista div, body .main .lista .tabla-responsive .encabezado-lista div {
     background-color: #00988D;
   }
-  body .paginas .lista .tabla-responsive .col, body .paginas .lista .tabla-responsive [class*=col-], body .main .lista .tabla-responsive .col, body .main .lista .tabla-responsive [class*=col-] {
-    min-width: 130px;
-    white-space: normal;
+  body .paginas .lista .tabla-responsive .mobile, body .main .lista .tabla-responsive .mobile {
+    display: none;
+  }
+  body .paginas .lista, body .main .lista {
+    /*.tabla-responsive .col, .tabla-responsive [class*="col-"] {
+        min-width: 50px;
+        white-space: normal;
+    }*/
   }
   body .paginas .graficos-grid .graficos ol, body .main .graficos-grid .graficos ol {
     padding: 35px 60px;
