@@ -200,9 +200,6 @@ body {
         .paginas, .main {
             overflow-x: hidden;
             .lista {
-                //overflow: visible ;
-                //padding-right: 0 ;
-                //margin-right: 0 ;
                 .tabla-responsive {
                     display: block;
                     overflow-x: auto;
@@ -231,10 +228,6 @@ body {
                         display: none;
                     }            
                 }
-                /*.tabla-responsive .col, .tabla-responsive [class*="col-"] {
-                    min-width: 50px;
-                    white-space: normal;
-                }*/
             }
             .graficos-grid .graficos ol {
                     padding: 35px 60px;
